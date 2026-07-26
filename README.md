@@ -30,6 +30,10 @@ Two columns, no header required (but a header row is fine and will be detected/s
 
 Column A becomes the output filename (`1.mp3`, `2.mp3`, `3.mp3`); column B is the text sent to ElevenLabs. Blank rows are ignored and whitespace is trimmed automatically.
 
+## Security
+
+This project pins `next@15.5.7` and `react@19.2.3`, the patched releases that fix the React Server Components RCE/DoS vulnerabilities disclosed in late 2025 / early 2026 (CVE-2025-55182, CVE-2025-55183, CVE-2025-55184, CVE-2025-67779, CVE-2025-66478). Before deploying, run `npm outdated` / check the [Next.js security advisories](https://nextjs.org/blog) to confirm these are still current — Vercel's dashboard will also flag any project running a vulnerable version.
+
 ## Installation
 
 ```bash

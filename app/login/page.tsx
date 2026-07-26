@@ -1,6 +1,7 @@
 'use client';
 
 import { Suspense, useState } from 'react';
+import type React from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';

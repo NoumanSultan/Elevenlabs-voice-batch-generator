@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type React from 'react';
 import { ToastProvider } from '@/components/ui/toast';
 import './globals.css';
 
