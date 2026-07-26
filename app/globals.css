@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 40 20% 97%;
+  --foreground: 220 20% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 20% 12%;
+  --border: 220 15% 88%;
+  --input: 220 15% 88%;
+  --ring: 158 64% 32%;
+  --muted: 220 20% 95%;
+  --muted-foreground: 220 10% 45%;
+  --primary: 158 64% 32%;
+  --primary-foreground: 0 0% 100%;
+  --destructive: 4 78% 52%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 158 64% 32%;
+  --accent: 32 85% 55%;
+  --accent-foreground: 20 40% 12%;
+}
+
+.dark {
+  --background: 222 30% 8%;
+  --foreground: 210 20% 94%;
+  --card: 222 26% 11%;
+  --card-foreground: 210 20% 94%;
+  --border: 222 18% 20%;
+  --input: 222 18% 20%;
+  --ring: 158 60% 45%;
+  --muted: 222 20% 15%;
+  --muted-foreground: 220 10% 65%;
+  --primary: 158 60% 45%;
+  --primary-foreground: 222 30% 8%;
+  --destructive: 4 78% 58%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 158 60% 45%;
+  --accent: 32 90% 60%;
+  --accent-foreground: 20 40% 10%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.waveform-bar {
+  animation: waveform 1.2s ease-in-out infinite;
+}
+
+@keyframes waveform {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
